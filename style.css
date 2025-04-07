@@ -1,0 +1,130 @@
+/*
+Theme Name: BookCollection
+Author: Mohammad Imran
+Description: A WordPress theme to display book collections.
+Version: 1.0
+Text Domain: bookcollection
+Template: twentytwentyone
+
+This is the child theme for Twenty Twenty-One theme, generated with Generate Child Theme plugin by catchthemes.
+
+(optional values you can add: Theme URI, Author URI, License, License URI, Tags, Text Domain)
+*/
+
+
+/* Container for book grid layout */
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Creates responsive grid */
+    gap: 20px; /* Space between grid items */
+    margin: 20px 0;
+}
+
+/* Style for individual book items */
+.book-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.book-link{
+    text-decoration: none;
+}
+
+/* Hover effect for book items */
+.book-item:hover {
+    transform: translateY(-5px); /* Slightly lift the item on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+}
+
+/* Thumbnail styling */
+.book-thumbnail img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+/* Book info styling */
+.book-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.book-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Responsive Text - Make sure text fits well on smaller screens */
+@media (max-width: 768px) {
+    .book-title {
+        font-size: 1.1rem;
+    }
+
+    .book-author,
+    .book-year {
+        font-size: 0.95rem;
+    }
+}
+
+
+/* single page  */
+.book-container {
+    max-width: 800px; /* Set the maximum width of the content */
+    margin: 0 auto; /* Center the container horizontally */
+    padding: 20px; /* Optional: Add padding around the content */
+}
+
+.book-details {
+    margin-top: 20px; /* Space between the title and the book details */
+}
+
+.book-details p {
+    line-height: 1.6; /* Improve readability of the text */
+    font-size: 1.1rem; /* Adjust font size for better readability */
+}
+
+
+/* shortcode page */
+/* Container for the grid */
+.book-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust column width */
+    gap: 20px; /* Space between grid items */
+    margin: 20px 0;
+}
+
+/* Individual grid item */
+.book-grid-item {
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effects for each book item */
+.book-grid-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Title styling */
+.book-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Excerpt styling */
+.book-excerpt {
+    color: #666;
+    font-size: 1em;
+    line-height: 1.6;
+}
